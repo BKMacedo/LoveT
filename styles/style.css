@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #0a0a0a; /*cor de fundo da tela inicial*/
+  color: #f3f5f3; /*cor da primeira frase da tela inicial*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+}
+#tituloDigitando {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f5f2f2;/*cor do OLÁ da tela inicial*/
+  margin: 0;
+  animation: aparecerSuave 1s ease-in-out forwards;
+}
+
+@keyframes aparecerSuave {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.pergunta{
+  color: #070707;
+}
+
+h1 { color: #080808; }
+h2, h3 { color: #f5f7f8; }
+
+button {
+  padding: 12px 24px;
+  background-color: #0d0e0d;/*cor do fundo do botão SOU EU*/
+  border: none;
+  border-radius: 20px;
+  color: #f8f4f4;/*cor da letra do botão da tela inicial*/
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 0 10px #f0f1f180;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #79a179;
+  box-shadow: 0 0 20px #f3f5f3aa;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(248, 245, 245, 0.85); /*cor do fundo do modal do quiz*/
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: rgb(141, 142, 143); /*cor do fundo do modal*/
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(12, 12, 12, 0.2);/*cor da sombra do modal quiz*/
+  position: relative;
+}
+
+#quiz, #mensagemFinal, #presentes, #tentarNovamente {
+  display: none;
+}
+
+#barraProgressoContainer {
+  width: 100%;
+  background: #faf9f9; /*cor da barra de progresso vazia*/
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: none;
+}
+
+#barraProgresso {
+  width: 0%;
+  height: 100%;
+  background: #abeca9;/*cor da barra de progresso sendo preenchida*/
+  transition: width 0.3s;
+}
+
+.pergunta { margin-bottom: 15px; }
+
+.resposta {
+  margin: 8px 0;
+  padding: 10px 16px;
+  background-color: #3d3c3c;/*cor do fundo das respostas*/
+  border: 1px solid #010c05;/*cor da borda das respostas*/
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.resposta:hover {
+  background-color: #c2bdbd; /*cor do fundo da pergunta quando vc passa o mouse*/
+}
+
+.btn-presente {
+  margin: 10px;
+  padding: 12px 20px;
+  background-color: #070707;/*cor de fundo dos presentes 1 e 2*/
+  color: rgb(242, 245, 242);/*cor da letra dos presentes 1 e 2*/
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-presente:hover {
+  background-color: #252525;/*cor quando passa o mouse dos presentes 1 e 2*/
+}
+#chuvaFofo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*me perdi nessa merda aqui mas deu certo sla oq é isso,acho que é um import de font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.modal-carta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(7, 7, 7, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-carta-content {
+  background: #252525;/*cor de fundo do modal do presente 2*/
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /*sombra do modal do presente 2*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-carta-conteudo {
+  background-image: url('https://i.imgur.com/vHBlCmg.png');
+  background-size: cover;
+  background-position: center;
+  font-family: cursive;
+  font-size: 0.8rem;
+  color: #f7f4f4;/*cor da letra da carta*/
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  line-height: 1.8;
+  max-height: 60vh;
+  overflow-y: auto;
+  text-align: left;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecerCarta 0.6s ease-out forwards;
+}
+
+@keyframes aparecerCarta {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-carta-conteudo::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-carta-conteudo::-webkit-scrollbar-thumb {
+  background: #fcfcfa;
+  border-radius: 3px;
+}
+
+.player {
+  text-align: center;
+}

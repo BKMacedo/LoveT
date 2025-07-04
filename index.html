@@ -1,11 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TTTTTTTTTTTTTT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parabéns neném 💚</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+  <div class="inicio">
+  <div class="coraçaozinho">💚</div>
+  <h1 id="tituloDigitando">Olá 💚</h1>
+  <p>Clique no botão se você for o Thiago Macedo!</p>
+  <button id="verificar">Sou eu 😎</button>
+</div>
+
+ <canvas id="chuvaFofo"></canvas>
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div id="barraProgressoContainer">
+        <div id="barraProgresso"></div>
+      </div>
+      <div id="mensagemFinal"></div>
+      <button id="tentarNovamente" onclick="resetarQuiz()">Tentar novamente</button>
+
+      <h2 id="tituloQuiz"> Quiz 💘</h2>
+      <p id="introQuiz">Vamos ver se você é mesmo o Thiago...</p>
+
+      <div id="quiz">
+        <h3>Responda para desbloquear seus presentes misteriosos</h3>
+
+        <div class="pergunta">
+          <p>1. Por quem o Thiago é apaixonado?</p>
+          <div class="resposta" data-certa="false">Luís Inácio Lula da Silva</div>
+          <div class="resposta" data-certa="true">Brenda Macedo</div>
+          <div class="resposta" data-certa="false">Jair Messias Bolsonaro</div>
+        </div>
+
+        <div class="pergunta">
+          <p>2. Qual é o nome de um dos cachorros do Thiago?</p>
+          <div class="resposta" data-certa="false">Floquinho</div>
+          <div class="resposta" data-certa="false">Doguinho</div>
+          <div class="resposta" data-certa="true">Mel</div>
+        </div>
+
+        <div class="pergunta">
+          <p>3. No Mundial de Clubes da Fifa, do dia 20/06 deste ano, quem venceu contra o Chelsea?</p>
+          <div class="resposta" data-certa="false">Corinthians</div>
+          <div class="resposta" data-certa="true">Flamengo</div>
+          <div class="resposta" data-certa="false">Vasco</div>
+        </div>
+
+        <div class="pergunta">
+          <p>4. O que o Thiago mais gostaria de comer?</p>
+          <div class="resposta" data-certa="false">Sushi</div>
+          <div class="resposta" data-certa="true">Brenda</div>
+          <div class="resposta" data-certa="false">Strogonoff</div>
+        </div>
+
+        <div class="pergunta">
+          <p>5. Complete a frase: "Uma vez ____, sempre ____"?</p>
+          <div class="resposta" data-certa="true">"Flamengo, sempre Flamengo"</div>
+          <div class="resposta" data-certa="false">"piranha, sempre piranha"</div>
+          <div class="resposta" data-certa="false">"feliz, sempre feliz"</div>
+        </div>
+      </div>
+
     
+      <div id="presentes">
+        <p>Você desbloqueou seus presentes, escolha um para abrir:</p>
+        <button class="btn-presente" data-presente="imagem">🎁 Presente 1</button>
+        <button class="btn-presente" data-presente="carta">🎁Presente 2</button>
+      </div>
+    </div>
+  </div>
+
+  <!--modal do presente 1 -->
+  <div id="modalImagem" class="modal">
+    <div class="modal-content">
+      <h2> Presente 1: 💚</h2>
+      <img src="imagens/presente1.png" alt="Presente fofo" style="max-width: 100%; border-radius: 12px;">
+      <br><br>
+      <button onclick="fecharModal('modalImagem')">Fechar</button>
+    </div>
+  </div>
+
+  <!-- modal do presente 2 - cartinhaaann -->
+  <div id="modalCarta" class="modal">
+    <div class="modal-carta-content">
+      <h2>Presente 2:💌</h2>
+      <div class="modal-carta-conteudo">
+        E aí, fiote 🥹 KKKKKKKKKK <br><br>
+        Olha, antes de tudo, eu não imaginava começar assim, pensei em mil possibilidades como: "Oi amor", "Meu amor" , "E aí, neném" e no final saiu o "fiote", tinha que ser o fiote? Provavelmente não, mas na real assim como tudo que a gente viveu nesses 4-5 meses TECNICAMENTE juntos (ou juntos pra caralho) tinha que ser algo inesperado ou só nosso, algo que significasse algo pra gente, que fizesse a gente dar risada ou que lembrasse de algum momento bom juntos.<br><br>
+
+        Agora que eu já comecei, bora pra o que interessa, eu pensei muito sobre o que dar e cara, eu não fazia ideia, ainda não faço, só queria que fosse algo que tivesse um significado e que você ia se sentir especial por ter aquilo, eu não sei pra você mas pra mim coisas assim tem muito valor.<br><br>
+
+        Minha ideia original era uma cartinha KKKKKK paia, mas ia ser fofo né? Mas você não mandou a porra do CEP 😔 e tá tudo bem, acho que o "upgrade" ficou melhor, espero que fique na verdade, tô dando meu cu naquele javascript e não tá sendo fácil não, mas o importante é que vai ser de coração.<br><br>
+
+        Como falar de você? O carinha que insistiu tanto pra falar comigo e eu ignorava, te agradeço muito por ter insistido, de verdade.<br><br>
+
+        Te conhecer foi literalmente uma luz, você literalmente me destravou pra tantas coisas que você nem faz ideia, não sei como te agradecer por isso, espero que um dia eu consiga.<br><br>
+
+        Estar com você, mesmo sendo por ligação, é QUENTE, é reconfortante, é um alívio, um descanso, você é um porto seguro, eu me sinto totalmente segura com você e pra uma pessoa cheia de questões como eu, isso é muito muito muito especial.<br><br>
+
+        Você com pequenas atitudes me mostra que cuida de mim, que se importa comigo, e que eu tenho valor, lembro que você disse uma vez (foi mais de uma) que eu tenho muito valor do que eu penso, e você sempre esteve certo, é muito difícil enxergar coisas boas em si mesmo e você é o tipo de pessoa que esfrega na cara da pessoa a realidade ali, e isso é do caralho, eu me sinto especial só por ser tão cuidada por você.<br><br>
+
+        Thiago, eu sei que falo isso sempre mas eu sou apaixonada pela sua risada, eu nunca ouvi algo tão genuíno como quando vc ri, eu fico feliz só de ouvir sua risada esquisita, amo mesmo, por isso adoro te fazer rir, adoro quando a gente vê algo engraçado e ri juntos, quando eu ou você pensamos em algo muito foda, numa resposta foda, e o outro simplesmente não aguenta o raciocínio super rápido e se acaba de rir, amo esses momentos com você.<br><br>
+
+        Quero que eu sempre seja esse local pra você, o local que você se abre e se diverte, que você desabafa e ri igual uma galinha, quero ser seu porto seguro também, quero cuidar de você, porque você merece ser cuidado, você merece muito.<br><br>
+
+        Assim como na mensagem lá que você mandou meses atrás, também quero jogar com você pra sempre, mas não MIR4, e sim, o jogo da vida.<br><br>
+
+        Você é um cara FODA, inteligente, bonito, engraçado (nem tanto), divertido, sua voz me deixa doida, UM GOSTOSO!!!!!!!!! Que seu dia seja tão especial quanto você é pra mim e pras pessoas que te amam, feliz aniversário meu neném, TE AMO 🩷<br><br>
+        Sempre que escuto essa, lembro de você...
+      <div class="player">
+        <audio controls>
+  <source src="sons/aliança.mp3" type="audio/mpeg">
+</audio></div><br>
+        Com todo carinho,<br>
+        Sua princesa 💚.
+      </div>
+      <br>
+      <button onclick="fecharModal('modalCarta')">Fechar</button>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/chuva.js"></script>
 </body>
 </html>
